@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Site Properties -->
+    <title>Juego del mentiroso</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/main.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class= "nav navbar-expand-sm bg-dark navbar-dark customnavbar">
+        <!-- Brand/logo -->
+        <div>
+            <span class="navbar-brand">Juego del mentiroso</span>
+        </div>
+        <div>
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="inline nav-item">
+                    <a class="nav-link" href="#">Do not have an account? Sign up</a>
+                </li>
+                <li class="inline nav-item">
+                    <a class="nav-link" href="#">Manuel</a>
+                </li>
+                <li class="inline nav-item float-right">
+                    <button class="btn btn-lg btn-danger btn-block" name="Submit" value="Login" type="Submit"> Desconectar </button>
+                </li>   
+            </ul>	
+        </div>
+    </nav>
+
+    <div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Mis partidas</a></li>
+            <li><a href="#">Partidas amiguetes</a></li>
+            <li><a href="#">Familiar</a></li>
+        </ul>
+    </div>
+    <div id="secondaryheader">
+        <div class = "shflex d-flex justify-content-between">
+            <div class="col-6">
+                <span id="mytext">¡Bienvenido!</span>
+            </div>
+            <div class="col-6">
+                <img class=" float-right imagenPortada" src="imagenes/ImagenPortada.jpg"/>
+            </div>
+        </div>
+    </div>
+    <div class = "d-flex justify-content-center">
+        <div class="wrapper p75 bg-dark">
+            <form action="" method="post" name="Login_Form" class="form-signin">       
+                <h3 class="form-signin-heading whitefonts">Identificarse</h3>
+                <p class="whitefonts smargin">Nombre del usuario: </p>
+                <input type="text" class="form-control smargin" name="Username" placeholder="Username" required="" autofocus="" />
+                <p class="whitefonts smargin">Contraseña: </p>
+                <input type="password" class="form-control smargin" name="Password" placeholder="Password" required=""/>     		  
+                <button class="btn btn-lg btn-primary smargin"  name="Submit" value="Login" type="Submit">Login</button>  			
+            </form>			
+        </div>
+    </div>
+
+   
+    <div class="row align-middle" id="matchview">
+        <div class="col-9">
+            <div class="wrapper bg-light thinborder">
+                <form action="" method="post" name="matches" class="whitebox">   
+                    <div class="align-middle">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3>Partida amiguetes</h3>
+                                <span>La partida aún no tiene cuatro jugadores. El identificador de esta partida es 3.</span>    
+                            </div>
+                            <div class="col-4">
+                                <button class="custombtn btn-lg btn-primary"  name="Submit" value="Login" type="Submit">Actualizar partida</button>  	
+                            </div>
+                        </div>            
+                    </div>      		
+                </form>			
+            </div>
+        </div>
+        
+        <div class="col-3">
+            <!-- Category -->
+            <div class=" bg-light">
+                <h3 class="smargin">Jugadores</h3>
+                <hr>
+                <ul class="list-unstyled">
+                    <li><h7>Nombre</h7> <span class="float-right rightmargin"><h7> Nº de cartas</h7></span></li>
+                    <hr>
+                    <li><a href="" title="" id="player1">Paco <span class="float-right rightmargin" id="player1cards">13</span></a></li>
+                    <li><a href="" title="" id="player2">Pepe <span class="float-right rightmargin" id="player2cards">13</span></a></li>
+                    <li><a href="" title="" id="player3">Marcelo <span class="float-right rightmargin" id="player3cards">13</span></a></li>
+                    <li><a href="" title="" id="player4">Ecommerce <span class="float-right rightmargin" id="player4cards">13</span></a></li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    <div class="mymatches">
+        <div class="d-flex justify-content-center">
+            <div class="wrapper p75 bg-light thinborder">
+                <form action="" method="post" name="createNewMatch" class="whitebox">       
+                    <h3 class="smargin">Crear una nueva partida</h3>
+                    <div class="input-group">
+                        <input type="text" class="form-control smargin" name="matchname" placeholder="Introduce aquí el nombre" required=""/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="Submit" name="Submit" value="Matchname">Crear</button>
+                        </span>
+                    </div>   		      
+                </form>			
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            <div class="wrapper p75 bg-light thinborder">
+                <form action="" method="post" name="JoinMatch" class="whitebox">       
+                    <h3 class="smargin">Unise a una partida existente</h3>
+                    <div class="input-group">
+                        <input type="text" class="form-control smargin" name="matchname" placeholder="Introduce aquí el identificador de la partida" required=""/>   
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="button">Unirse</button>
+                        </span>
+                    </div>	      
+                </form>		
+                	
+            </div>
+        </div>
+        
+        <div class="wrapper">
+            <form action="" method="post" name="JoinMatch" class="gameBox">       
+                <h4>Cartas en la mesa</h4>
+                <hr>
+                <p class="tableCards" id="mount"></p>
+                <p>Manuel dice que ha colocado un 5.</p>		
+            </form>			
+        </div>
+        <div class="wrapper">
+            <form action="" method="post" name="JoinMatch" class="gameBox">    
+                <h4>Tus cartas</h4>
+                <hr>
+                <p class="tableCards" id="mount"></p>
+                <p>Todavía no es tu turno.</p>
+                <button class="btn btn-lg btn-primary inline"  name="Submit" value="Login" type="Submit">Jugar cartas seleccionadas</button>
+                <button class="btn btn-lg btn-danger inline"  name="Submit" value="Login" type="Submit">¡Mentisoso!</button>	
+            </form>			
+        </div>
+    </div>
+</body>

@@ -1,0 +1,81 @@
+
+.customnavbar {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size:2rem;
+    margin: auto;
+}
+
+#mytext{
+    font-size: 4.5vw;
+}
+
+.form-heading {
+    color: whitesmoke;
+}
+
+#secondaryheader{
+    background-color: #E5E5E5;
+}
+
+.imagenPortada {
+    max-width:300px;
+    height: auto;
+}
+.shflex {
+    align-items: center;
+    padding-top:1%;
+    padding-bottom: 1%;
+    padding-right: 3%;
+    margin-left: 4%;
+}
+
+.whitefonts {
+    color: whitesmoke;
+}
+
+.cards {
+    margin: 3px;
+    filter: drop-shadow(3px 3px 3px #444);
+}
+
+.p75 {
+    width: 75%;
+}
+
+.wrapper {
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    margin: 20px;
+    padding-top:1%;
+    padding-left: 5%;;
+    padding-right: 5%;
+    padding-bottom: 2%;
+}
+
+.rightmargin {
+    margin-right: 5px;
+}
+
+.custombtn {
+    white-space: normal;
+}
+
+li {
+    margin: 2px;
+    padding: 2px;
+}
+.smargin {
+    margin: 3px;
+}
+
+.thinborder {
+    border: 0.5px solid lightgrey;
+}
+
+#matchview {
+    width: 95%;
+}
